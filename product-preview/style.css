@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --montserrat_font: 'Montserrat', sans-serif;
+    --fraunces_font: 'Fraunces', serif;
+    --dark_cyan2: hsl(158, 37%, 24%);
+    --dark_cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very_dark_blue: hsl(212, 21%, 14%);
+    --dark_grayish_blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cream);
+    font-family: var(--fraunces_font);
+}
+
+main {
+    display: flex;
+    background: white;
+    width: 800px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.082);
+}
+
+picture img {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.content_container {
+    padding: 30px;
+}
+
+header p {
+    font-family: var(--montserrat_font);
+    color: var(--dark_grayish_blue);
+    letter-spacing: 0.5em;
+    padding-bottom: 30px;
+}
+
+header h1 {
+    padding-bottom: 30px;
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.description {
+    padding-bottom: 30px;
+}
+
+section p {
+    font-family: var(--montserrat_font);
+    color: var(--dark_grayish_blue);
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.price {
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.price span {
+    font-size: 3em;
+    color: var(--dark_cyan);
+}
+
+.main_price {
+    font-size: 0.9em;
+    padding-left: 20px;
+    color: var(--dark_grayish_blue);
+    font-family: var(--montserrat_font)
+}
+
+.sr-only {
+    display: none;
+}
+
+button {
+    transition: 700ms;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0;
+    font-weight: bold;
+    border: none;
+    background-color: var(--dark_cyan);
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    letter-spacing:0.1em;
+}
+
+button a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+button:hover {
+    background-color: var(--dark_cyan2);
+}
+
+@media all and (max-width: 685px){
+    main {
+        scale: 0.8;
+        width: 375px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    picture img {
+        width: 375px;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price {
+        padding-bottom: 20px;
+    }
+}
